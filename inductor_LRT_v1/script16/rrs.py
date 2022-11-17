@@ -169,11 +169,11 @@ def run_simul(version_idx_str):
         print("fail")
 
 
-    temp1 = pd.read_csv(f'.\ML_data\inductance_{version_idx_str}.csv', sep=",")
+    temp1 = pd.read_csv(f'Y:\git\\ML_inductor\inductor_LRT_v1\script16\ML_data\inductance_{version_idx_str}.csv', sep=",")
     temp1 = temp1.to_numpy()
     
   
-    temp2 = pd.read_csv(f'.\ML_data\loss_{version_idx_str}.csv', sep=",")
+    temp2 = pd.read_csv(f'Y:\git\ML_inductor\inductor_LRT_v1\script16\ML_data\loss_{version_idx_str}.csv', sep=",")
     temp2 = temp2.to_numpy()
 
     parameter = np.array([N1,w1,l1,l2,h1,per,space1,space2,coil_width,move_z,offset,freq])

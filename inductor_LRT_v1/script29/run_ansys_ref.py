@@ -1178,7 +1178,7 @@ oModule.AssignWindingGroup(
 		"NAME:Tx",
 		"Type:="		, "Current",
 		"IsSolid:="		, True,
-		"Current:="		, "100A",
+		"Current:="		, "100*sqrt(2)A",
 		"Resistance:="		, "0ohm",
 		"Inductance:="		, "0nH",
 		"Voltage:="		, "0mV",
@@ -1214,7 +1214,7 @@ oModule.AssignSkinDepthOp(
 		"RestrictElem:="	, False,
 		"NumMaxElem:="		, "1000",
 		"SkinDepth:="		, "skin",
-		"SurfTriMaxLength:="	, "25mm",
+		"SurfTriMaxLength:="	, "20mm",
 		"NumLayers:="		, "2"
 	])
 
