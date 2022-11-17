@@ -127,11 +127,11 @@ def run_simul(version_idx_str):
 
     #1 Make Folder
     folder_name = f'SIMUL_{version_idx_str}'
-    os.makedirs(f'.\script26\ML\SIMUL_{version_idx_str}')
+    os.makedirs(f'.\ML\SIMUL_{version_idx_str}')
 
 
     #2 Make Variable info file
-    with open(f'.\script26\ML\SIMUL_{version_idx_str}\info.yaml', "w") as info_file:
+    with open(f'.\ML\SIMUL_{version_idx_str}\info.yaml', "w") as info_file:
         yaml.dump(config,info_file)
 
 
@@ -148,17 +148,17 @@ def run_simul(version_idx_str):
         ref_script_str = ref_script_str.replace(idt, str(var))
 
     #Save file
-    with open(f'.\\script26\\ML\\SIMUL_{version_idx_str}\\run_ansys_{version_idx_str}.py',"w") as f :
+    with open(f'.\\ML\\SIMUL_{version_idx_str}\\run_ansys_{version_idx_str}.py',"w") as f :
         f.write(ref_script_str)
 
 
     #4 make batch file.
     filepath2 = os.path.join('ML',folder_name,f'run_bat_{version_idx_str}.bat')
-    with open(f'.\\script26\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat',"w") as f :
+    with open(f'.\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat',"w") as f :
         f.write(f'"C:\\Program Files\\AnsysEM\\AnsysEM21.1\\Win64\\ansysedt.exe" -iconic -runscriptandexit ".\\run_ansys_{version_idx_str}.py"')
 
 
-    workingDir = f'.\\script26\\ML\\SIMUL_{version_idx_str}'
+    workingDir = f'.\\ML\\SIMUL_{version_idx_str}'
     executeFile = f'Y:\\git\\ML_inductor\\inductor_LRT_v1\\script26\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat'
     os.chdir(workingDir)
     try :
