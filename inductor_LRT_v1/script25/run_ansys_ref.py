@@ -7,7 +7,7 @@ oDesktop.RestoreWindow()
 
 oDesktop.OpenProject("Y:/git/ML_inductor/inductor_LRT_v1/script25/ML_aedt/ML25.aedt")
 
-oProject = oDesktop.SetActiveProject("inductor1")
+oProject = oDesktop.SetActiveProject("ML25")
 oProject.InsertDesign("Maxwell", "Maxwell_inductor_v$VERSION_IDX_STR", "EddyCurrent", "")
 oDesign = oProject.SetActiveDesign("Maxwell_inductor_v$VERSION_IDX_STR")
 
