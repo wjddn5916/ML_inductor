@@ -92,7 +92,7 @@ def run_simul(version_idx_str):
         
     
     if height_h > core_height or height_l < -core_height:
-        h1_new_range = [height+10,height+40, 0.1, 1]
+        h1_new_range = [height+5,height+40, 0.1, 1]
         h1 = random_choice(h1_new_range)
     
 
@@ -160,7 +160,7 @@ def run_simul(version_idx_str):
 
     workingDir = f'.\\ML\\SIMUL_{version_idx_str}'
     executeFile = f'Y:\\git\\ML_inductor\\inductor_LRT_v1\\script1\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat'
-    os.chdir(workingDir)
+    #os.chdir(workingDir)
     try :
         os.system(executeFile)
         print("success")
