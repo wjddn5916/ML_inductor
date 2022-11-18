@@ -159,7 +159,7 @@ def run_simul(version_idx_str):
 
 
     workingDir = f'.\\ML\\SIMUL_{version_idx_str}'
-    executeFile = f'Y:\\git\\ML_inductor\\inductor_LRT_v1\\script111\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat'
+    executeFile = f'Y:\\git\\ML_inductor\\inductor_LRT_v1\\script11\\ML\\SIMUL_{version_idx_str}\\run_bat_{version_idx_str}.bat'
     os.chdir(workingDir)
     try :
         os.system(executeFile)
@@ -169,11 +169,11 @@ def run_simul(version_idx_str):
         print("fail")
 
 
-    temp1 = pd.read_csv(f'Y:\git\\ML_inductor\inductor_LRT_v1\script111\ML_data\inductance_{version_idx_str}.csv', sep=",")
+    temp1 = pd.read_csv(f'Y:\git\\ML_inductor\inductor_LRT_v1\script11\ML_data\inductance_{version_idx_str}.csv', sep=",")
     temp1 = temp1.to_numpy()
     
   
-    temp2 = pd.read_csv(f'Y:\git\ML_inductor\inductor_LRT_v1\script111\ML_data\loss_{version_idx_str}.csv', sep=",")
+    temp2 = pd.read_csv(f'Y:\git\ML_inductor\inductor_LRT_v1\script11\ML_data\loss_{version_idx_str}.csv', sep=",")
     temp2 = temp2.to_numpy()
 
     parameter = np.array([N1,w1,l1,l2,h1,per,space1,space2,coil_width,move_z,offset,freq])
@@ -187,13 +187,13 @@ def run_simul(version_idx_str):
     
 
 
-    data1 = np.loadtxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script111\inductance.csv', delimiter=",")
+    data1 = np.loadtxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script11\inductance.csv', delimiter=",")
     new_data1 = np.vstack((data1, temp1))
-    np.savetxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script111\inductance.csv',new_data1,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script11\inductance.csv',new_data1,delimiter=",")
 
-    data2 = np.loadtxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script111\loss.csv', delimiter=",")
+    data2 = np.loadtxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script11\loss.csv', delimiter=",")
     new_data2 = np.vstack((data2, temp2))
-    np.savetxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script111\loss.csv',new_data2,delimiter=",")
+    np.savetxt(f'Z:\Autosimul_data\inductor\inductor_LRT_v1\{COMPUTER_NAME}\script11\loss.csv',new_data2,delimiter=",")
 
 
 
@@ -203,15 +203,14 @@ for i in range(1, 10000):
     print({i})
 
     try :
-        try:
-            os.remove(f'.\ML_aedt\ML111.aedt.lock')
-        except:
-            time.sleep(1)
-        if os.path.isfile(f'.\ML_aedt\ML111.aedt') :
-            os.remove(f'.\ML_aedt\ML111.aedt')
+
+        if os.path.isfile(f'.\ML_aedt\ML11.aedt.lock') :
+            os.remove(f'.\ML_aedt\ML11.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML11.aedt') :
+            os.remove(f'.\ML_aedt\ML11.aedt')
         time.sleep(1)	
 
-        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML111.aedt')
+        shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML11.aedt')
         time.sleep(1)
 
         try:
@@ -220,19 +219,9 @@ for i in range(1, 10000):
             print(f'error number {i}')
             print(e)
 
-        if os.path.isfile(f'.\ML_aedt\ML111.aedt') :
-            os.remove(f'.\ML_aedt\ML111.aedt')
-        time.sleep(1)	
-
-        shutil.rmtree(f'.\ML_aedt\ML111.aedtresults')
-        try:
-            os.remove(f'.\ML_aedt\ML111.aedt.lock')
-        except:
-            time.sleep(1)
+        shutil.rmtree(f'.\ML_aedt\ML11.aedtresults')
     except :
         time.sleep(1)	
-    
-    time.sleep(1)
 
 
 os.system("pause")

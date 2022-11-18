@@ -5,9 +5,9 @@ import ScriptEnv
 ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
 oDesktop.RestoreWindow()
 
-oDesktop.OpenProject("Y:/git/ML_inductor/inductor_LRT_v1/script188/ML_aedt/ML188.aedt")
+oDesktop.OpenProject("Y:/git/ML_inductor/inductor_LRT_v1/script18/ML_aedt/ML18.aedt")
 
-oProject = oDesktop.SetActiveProject("ML188")
+oProject = oDesktop.SetActiveProject("ML18")
 oProject.InsertDesign("Maxwell", "Maxwell_inductor_v$VERSION_IDX_STR", "EddyCurrent", "")
 oDesign = oProject.SetActiveDesign("Maxwell_inductor_v$VERSION_IDX_STR")
 
@@ -1300,7 +1300,7 @@ oModule.CreateReport("Loss", "EddyCurrent", "Data Table", "Setup1 : LastAdaptive
 	])
 
 
-oModule.ExportToFile("inductance", "Y:/git/ML_inductor/inductor_LRT_v1/script188/ML_data/inductance_$VERSION_IDX_STR.csv", False)
-oModule.ExportToFile("Loss", "Y:/git/ML_inductor/inductor_LRT_v1/script188/ML_data/Loss_$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("inductance", "Y:/git/ML_inductor/inductor_LRT_v1/script18/ML_data/inductance_$VERSION_IDX_STR.csv", False)
+oModule.ExportToFile("Loss", "Y:/git/ML_inductor/inductor_LRT_v1/script18/ML_data/Loss_$VERSION_IDX_STR.csv", False)
 oDefinitionManager.RemoveMaterial("ferrite$VERSION_IDX_STR", True, "", "Project")
 

@@ -203,10 +203,9 @@ for i in range(1, 10000):
     print({i})
 
     try :
-        try:
-            os.remove(f'.\ML_aedt\ML23.aedt.lock')
-        except:
-            time.sleep(1)
+
+        if os.path.isfile(f'.\ML_aedt\ML23.aedt.lock') :
+            os.remove(f'.\ML_aedt\ML23.aedt')
         if os.path.isfile(f'.\ML_aedt\ML23.aedt') :
             os.remove(f'.\ML_aedt\ML23.aedt')
         time.sleep(1)	
@@ -220,19 +219,9 @@ for i in range(1, 10000):
             print(f'error number {i}')
             print(e)
 
-        if os.path.isfile(f'.\ML_aedt\ML23.aedt') :
-            os.remove(f'.\ML_aedt\ML23.aedt')
-        time.sleep(1)	
-
         shutil.rmtree(f'.\ML_aedt\ML23.aedtresults')
-        try:
-            os.remove(f'.\ML_aedt\ML23.aedt.lock')
-        except:
-            time.sleep(1)
     except :
         time.sleep(1)	
-    
-    time.sleep(1)
 
 
 os.system("pause")
