@@ -212,7 +212,10 @@ for i in range(1, 10000):
 
         shutil.copy(f'.\ML_aedt\ML_ref.aedt',f'.\ML_aedt\ML11.aedt')
         time.sleep(1)
+    except :
+        print("copy error")
 
+    try :
         try:
             run_simul(i)
         except Exception as e: 
