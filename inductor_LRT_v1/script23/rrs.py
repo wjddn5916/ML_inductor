@@ -200,7 +200,7 @@ def run_simul(version_idx_str):
 for i in range(1, 10000): 
 
     #run_simul(i)
-    #print("end")
+    print({i})
 
     try :
         try:
@@ -231,6 +231,8 @@ for i in range(1, 10000):
             time.sleep(1)
     except :
         time.sleep(1)	
+    
+    time.sleep(1)
 
 
 os.system("pause")
