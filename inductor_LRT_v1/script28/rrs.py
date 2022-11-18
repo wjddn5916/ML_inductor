@@ -41,7 +41,7 @@ def run_simul(version_idx_str):
    
     coil_width_range = [2, 15, 0.1, 1] 
     
-    move_z_range = [1,6,0.1,1]
+    move_z_range = [0.5,6,0.1,1]
 
     offset_range = [-15,15,0.1,1]
 

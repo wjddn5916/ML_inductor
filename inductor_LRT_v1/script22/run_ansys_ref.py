@@ -1215,7 +1215,7 @@ oModule.AssignSkinDepthOp(
 		"NumMaxElem:="		, "1000",
 		"SkinDepth:="		, "skin",
 		"SurfTriMaxLength:="	, "20mm",
-		"NumLayers:="		, "5"
+		"NumLayers:="		, "3"
 	])
 
 # analysis
