@@ -1215,7 +1215,7 @@ oModule.AssignSkinDepthOp(
 		"NumMaxElem:="		, "1000",
 		"SkinDepth:="		, "skin",
 		"SurfTriMaxLength:="	, "20mm",
-		"NumLayers:="		, "2"
+		"NumLayers:="		, "5"
 	])
 
 # analysis
@@ -1234,7 +1234,7 @@ oModule.InsertSetup("EddyCurrent",
 		"MinimumConvergedPasses:=", 1,
 		"PercentRefinement:="	, 30,
 		"SolveFieldOnly:="	, False,
-		"PercentError:="	, 1,
+		"PercentError:="	, 2.5,
 		"SolveMatrixAtLast:="	, True,
 		"UseNonLinearIterNum:="	, False,
 		"CacheSaveKind:="	, "Delta",
