@@ -176,7 +176,7 @@ def run_simul(version_idx_str):
     temp2 = pd.read_csv(f'Y:\git\ML_inductor\inductor_LRT_v1\script10\ML_data\loss_{version_idx_str}.csv', sep=",")
     temp2 = temp2.to_numpy()
 
-    parameter = np.array([N1,w1,l1,l2,h1,per,space1,space2,coil_width,move_z,offset,freq])
+    parameter = np.array([N1,w1,l1,l2,h1,per,gap,space1,space2,coil_width,move_z,offset,freq])
 
     temp1 = np.append(parameter,temp1)
     temp2 = np.append(parameter,temp2)
@@ -223,6 +223,10 @@ for i in range(1, 10000):
             print(e)
 
         shutil.rmtree(f'.\ML_aedt\ML10.aedtresults')
+        if os.path.isfile(f'.\ML_aedt\ML10.aedt.lock') :
+            os.remove(f'.\ML_aedt\ML10.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML10.aedt') :
+            os.remove(f'.\ML_aedt\ML10.aedt')
     except :
         time.sleep(1)	
 

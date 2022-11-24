@@ -223,6 +223,10 @@ for i in range(1, 10000):
             print(e)
 
         shutil.rmtree(f'.\ML_aedt\ML1.aedtresults')
+        if os.path.isfile(f'.\ML_aedt\ML1.aedt.lock') :
+            os.remove(f'.\ML_aedt\ML1.aedt')
+        if os.path.isfile(f'.\ML_aedt\ML1.aedt') :
+            os.remove(f'.\ML_aedt\ML1.aedt')
     except :
         time.sleep(1)	
 
